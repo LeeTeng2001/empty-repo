@@ -1,0 +1,6 @@
+[book]
+authors = ["Bryan Lee"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Let's build a git!"
