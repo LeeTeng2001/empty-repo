@@ -1,6 +1,6 @@
 # Summary
 
-[Introduction]()
+[Introduction](./introduction.md)
 
 - [Init](./chapter_1.md)
 - [ls-tree]()
