@@ -75,7 +75,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="introduction.html">Introduction</a></li><li class="chapter-item expanded "><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Init</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> ls-tree</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> cat-file</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Commit</div></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="introduction.html">Introduction</a></li><li class="chapter-item expanded "><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Init</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> ls-tree</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> cat-file</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Commit</div></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="credit.html">Credit</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -134,9 +134,23 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="git-init"><a class="header" href="#git-init">Git init</a></h1>
-<p>Introduction</p>
-<p>something here</p>
+                        <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
+<p>Have you ever wondered about how git does all the version control magic? Today we're going to implement the algorithm behind git, by the end of the tutorial, you will have a working version control system like git.</p>
+<p>Before starting this tutorial you should have a basic understanding of git usage (init, commit etc), you can follow this tutorial in any OOP language.</p>
+<p>I'll give you a brief overview of what we're going to write</p>
+<ul>
+<li>How to handle CLI commands</li>
+<li>How to represent git object internally</li>
+<li>Write unit tests for your code</li>
+</ul>
+<p>We don't want to reinvent too many wheels, that's why we're calling help from third party libraries. I'm writing this program in Java 17. </p>
+<p>You should have a solution for:</p>
+<ul>
+<li><strong>CLI Parser</strong>: In my case I'm using <a href="https://picocli.info/">PicoCLI</a>, there are other alternatives like <a href="https://jcommander.org/">JCommander</a> and <a href="https://commons.apache.org/proper/commons-cli/">Apache Commons CLI</a>, I didn't use them because the support for sub-commands is weak, I think PicoCLI really shine in this aspect. Your choice of CLI parser should be able to support flag, optional argument, help message and sub-commands.</li>
+<li><strong>Compression &amp; Decompression</strong>: Your compression library should be able to support <a href="https://en.wikipedia.org/wiki/Zlib">ZLib compression</a>, which is what git uses internally. Java has built in Deflater class in this case.</li>
+<li><strong>INI file parser</strong>: We're using <a href="http://ini4j.sourceforge.net/">ini4j</a>, git stores config file in this format</li>
+</ul>
+<p>My final implementation will be available at <a href="https://github.com/LeeTeng2001/my-git">my repo</a>. Feel free to check it out if you're stuck!</p>
 
                     </main>
 

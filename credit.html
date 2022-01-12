@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Init - Let&#x27;s build a git!</title>
+        <title>Credit - Let&#x27;s build a git!</title>
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
@@ -75,7 +75,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="introduction.html">Introduction</a></li><li class="chapter-item expanded "><a href="chapter_1.html" class="active"><strong aria-hidden="true">1.</strong> Init</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> ls-tree</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> cat-file</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Commit</div></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="credit.html">Credit</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="introduction.html">Introduction</a></li><li class="chapter-item expanded "><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Init</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> ls-tree</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> cat-file</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Commit</div></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="credit.html" class="active">Credit</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -134,52 +134,13 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="git-init"><a class="header" href="#git-init">Git init</a></h1>
-<p>Let's write a git algorithm together!</p>
-<pre><code class="language-java">import cli.*;
-import picocli.CommandLine;
-import picocli.CommandLine.Command;
-
-import java.util.concurrent.Callable;
-
-import static helper.Utility.MsgLevel;
-import static helper.Utility.printLog;
-
-@Command(name = &quot;git&quot;, mixinStandardHelpOptions = true, subcommands = {
-        GitInitCli.class,
-        GitCatFileCli.class,
-        GitHashObjectCli.class,
-        GitLogCli.class,
-        GitLsTreeCli.class,
-        GitRestoreCli.class,
-        GitShowRefCli.class,
-        GitTagCli.class,
-        GitStatusCli.class,
-        GitCommitCli.class,
-})
-public final class Git implements Callable&lt;Integer&gt; {
-    @Override
-    public Integer call() {
-        printLog(&quot;Cannot call git without sub-command!&quot;, MsgLevel.ERROR);
-        return 1;
-    }
-
-    public static void main(String... args) {
-        int exitCode = new CommandLine(new Git()).execute(args);
-        System.exit(exitCode);
-    }
-}
-</code></pre>
-
+                        
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="introduction.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="chapter_1.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
-                            </a>
-                            <a rel="next" href="credit.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <i class="fa fa-angle-right"></i>
                             </a>
                         <div style="clear: both"></div>
                     </nav>
@@ -187,11 +148,8 @@ public final class Git implements Callable&lt;Integer&gt; {
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="introduction.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="chapter_1.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
-                    </a>
-                    <a rel="next" href="credit.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
 
