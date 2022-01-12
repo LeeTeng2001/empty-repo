@@ -6,3 +6,7 @@
 - [ls-tree]()
 - [cat-file]()
 - [Commit]()
+
+---
+
+[Credit](./credit.md)
